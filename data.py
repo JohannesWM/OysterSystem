@@ -3,8 +3,8 @@ import datetime
 now = datetime.datetime.now()
 
 
-def log(date, time, temp, ph, salinity):
-    data = f"{date}x{time}x{temp}x{ph}x{salinity}"
+def log(temp, ph, salinity):
+    data = f"{now.date()}x{now.time()}x{temp}x{ph}x{salinity}"
 
     try:
         with open("log.txt", 'a') as logFile:
@@ -47,7 +47,5 @@ def get():
     salinity = 1234
 
     data = [temp, ph, salinity]
-
-    #log(now.date(), now.time(), temp, ph, salinity)
 
     return data
