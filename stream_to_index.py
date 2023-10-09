@@ -14,12 +14,6 @@ app = Flask(__name__, template_folder='./templates', static_url_path='/custom_st
 
 camera = cv2.VideoCapture(0)
 
-log1 = [1, 2, 3, 4]
-log2 = [1, 2, 3, 4]
-log3 = [1, 2, 3, 4]
-log4 = [1, 2, 3, 4]
-log5 = [1, 2, 3, 4]
-
 
 def gen_frames():  # generate frame by frame from camera
     while True:
@@ -41,7 +35,12 @@ def gen_frames():  # generate frame by frame from camera
 @app.route('/')
 def index():
     return render_template('index.html',
-                           data=data.get(), log1=log1, log2=log2, log3=log3, log4=log4, log5=log5)
+                           data=data.get(), log=data.fetch())
+
+@app.route('/log')
+def log():
+    return render_template('log.html',
+                           logAll=data.fetchAll())
 
 
 @app.route('/video_feed')
