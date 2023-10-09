@@ -34,7 +34,7 @@ def gen_frames():  # generate frame by frame from camera
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', log1=[1,2,3,4], log2=[1,2,3,4], log3=[1,2,3,4], log4=[1,2,3,4], log5=[1,2,3,4])
 
 
 @app.route('/video_feed')
