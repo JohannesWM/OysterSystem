@@ -62,36 +62,14 @@
     </head>
     <body>
         <div class="container-scroller">
-            <div class="row p-0 m-0 proBanner d-none d-flex" id="proBanner">
-                <div class="col-md-12 p-0 m-0">
-                    <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
-                        <div class="ps-lg-1">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates, and more with this template!</p>
-                                <a href="https://www.bootstrapdash.com/product/purple-bootstrap-admin-template/?utm_source=organic&amp;utm_medium=banner&amp;utm_campaign=buynow_demo" target="_blank" class="btn me-2 buy-now-btn border-0">
-                                    Get Pro
-                                </a>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                            <a href="https://www.bootstrapdash.com/product/purple-bootstrap-admin-template/"><i class="mdi mdi-home me-3 text-white"></i></a>
-                            <button id="bannerClose" class="btn border-0 p-0">
-                                <i class="mdi mdi-close text-white me-0"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="container-fluid page-body-wrapper pt-0">
                 <nav class="sidebar sidebar-offcanvas" id="sidebar">
                     <ul class="nav">
                         <li class="nav-item nav-profile active">
-                            <a href="index.html#" class="nav-link">
+                            <a href="/" class="nav-link">
                                 <div class="nav-profile-image">
                                     <img src="https://play-lh.googleusercontent.com/RuftNqcGLL69LUqbi3kihK7_Kicq8BDsdw3W0yU5OOUlTsq07Qh9mgdBl3taYUids9o" alt="profile" />
                                     <span class="login-status online"></span>
-                                    <!--change to offline or busy as needed-->
                                 </div>
                                 <div class="nav-profile-text d-flex flex-column">
                                     <span class="font-weight-bold mb-2">Fish Tank</span>
@@ -100,34 +78,28 @@
                                 <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
                             </a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">
                                 <span class="menu-title">Dashboard</span>
                                 <i class="mdi mdi-home menu-icon"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('static', filename='pages/icons/mdi.html') }}">
-                                <span class="menu-title">Icons</span>
-                                <i class="mdi mdi-contacts menu-icon"></i>
+                            <a class="nav-link" href="/log">
+                                <span class="menu-title">Full Data Log</span>
+                                <i class="mdi mdi-table menu-icon"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('static', filename='pages/forms/basic_elements.html') }}">
-                                <span class="menu-title">Forms</span>
-                                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+                            <a class="nav-link" href="/stream">
+                                <span class="menu-title">Video Stream</span>
+                                <i class="mdi mdi-webcam menu-icon"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('static', filename='pages/charts/chartjs.html') }}">
-                                <span class="menu-title">Charts</span>
-                                <i class="mdi mdi-chart-bar menu-icon"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('static', filename='pages/tables/basic-table.html') }}">
-                                <span class="menu-title">Tables</span>
-                                <i class="mdi mdi-table-large menu-icon"></i>
+                            <a class="nav-link" href="https://mbs.net">
+                                <span class="menu-title">MBS.net</span>
+                                <i class="mdi mdi-book-multiple menu-icon"></i>
                             </a>
                         </li>
                     </ul>
