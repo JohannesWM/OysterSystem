@@ -1,7 +1,7 @@
 from flask import Flask, render_template, Response, request
 import cv2
+import data
 import os
-
 
 # make shots directory to save pics
 try:
@@ -10,9 +10,15 @@ except OSError as error:
     pass
 
 # instatiate flask app
-app = Flask(__name__, template_folder='./templates')
+app = Flask(__name__, template_folder='./templates', static_url_path='/custom_static', static_folder='static')
 
 camera = cv2.VideoCapture(0)
+
+log1 = [1, 2, 3, 4]
+log2 = [1, 2, 3, 4]
+log3 = [1, 2, 3, 4]
+log4 = [1, 2, 3, 4]
+log5 = [1, 2, 3, 4]
 
 
 def gen_frames():  # generate frame by frame from camera
@@ -34,7 +40,8 @@ def gen_frames():  # generate frame by frame from camera
 
 @app.route('/')
 def index():
-    return render_template('index.html', log1=[1,2,3,4], log2=[1,2,3,4], log3=[1,2,3,4], log4=[1,2,3,4], log5=[1,2,3,4])
+    return render_template('index.html',
+                           data=data.get(), log1=log1, log2=log2, log3=log3, log4=log4, log5=log5)
 
 
 @app.route('/video_feed')
