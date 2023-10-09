@@ -48,6 +48,6 @@ def get():
 
     data = [temp, ph, salinity]
 
-    log(now.date(), now.time(), temp, ph, salinity)
+    #log(now.date(), now.time(), temp, ph, salinity)
 
     return data
