@@ -65,6 +65,14 @@ def handle_disconnect():
     locked = False
 
 
+@app.route('/inactivity_redirect')
+def inactivityRedirect():
+    global locked
+    locked = False
+    return render_template('index.html',
+                           data=data.get(), log=data.fetch())
+
+
 @app.route('/video_feed')
 def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
