@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Response, request
+from flask import Flask, render_template, Response
 from flask_socketio import SocketIO
 import threading
 import cv2
